@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>House Price Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            padding: 40px;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        h2 {
+            text-align: center;
+        }
+        .result {
+            margin-top: 15px;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>House Price Prediction</h2>
+
+    <form method="POST">
+        <input type="number" name="OverallQual" placeholder="Overall Quality (1–10)" required>
+        <input type="number" name="GrLivArea" placeholder="Ground Living Area (sq ft)" required>
+        <input type="number" name="TotalBsmtSF" placeholder="Basement Area (sq ft)" required>
+        <input type="number" name="GarageCars" placeholder="Garage Cars" required>
+        <input type="number" name="BedroomAbvGr" placeholder="Bedrooms Above Ground" required>
+        <input type="number" name="YearBuilt" placeholder="Year Built" required>
+
+        <button type="submit">Predict Price</button>
+    </form>
+
+    {% if prediction %}
+        <div class="result">
+            Predicted House Price: {{ prediction }}
+        </div>
+    {% endif %}
+</div>
+
+</body>
+</html>
