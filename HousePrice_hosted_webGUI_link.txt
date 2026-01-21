@@ -2,5 +2,5 @@ Name: Matthew Favour Imaobong
 Matric Number: 23CG034094
 Machine Learning Algorithm Used: Random Forest Regressor
 Model Persistence Method Used: Joblib
-Live URL: <PASTE STREAMLIT LINK HERE>
-GitHub Repository Link: <PASTE GITHUB LINK HERE>
+Live URL: https://house-price-prediction-project-b7g8.onrender.com/
+GitHub Repository Link: https://github.com/4-FavDev/House-price-prediction-project
